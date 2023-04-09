@@ -45,7 +45,7 @@
                 android:layout_marginRight="10dip">
 
                 <Button
-                    android:id="@+id/ButtonC"
+                    android:id="@+id/ButtonCln"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -70,7 +70,7 @@
                     android:textSize="20sp" />
 
                 <Button
-                    android:id="@+id/ButtonCln"
+                    android:id="@+id/ButtonRes"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
