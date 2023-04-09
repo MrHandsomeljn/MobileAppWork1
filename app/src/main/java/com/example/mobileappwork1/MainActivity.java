@@ -1,11 +1,8 @@
 package com.example.mobileappwork1;
 
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,14 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
-
-
-
         Objects.requireNonNull(getSupportActionBar()).setTitle("汇率计算器");
-        Log.d(TAG, "onCreate: 1");
 
         inputTv = findViewById(R.id.InputEqu);
         buttonMap.put("0",   (Button) findViewById(R.id.Button0));
@@ -46,37 +36,39 @@ public class MainActivity extends AppCompatActivity {
         buttonMap.put("9",   (Button) findViewById(R.id.Button9));
         buttonMap.put("c"  , (Button) findViewById(R.id.ButtonC  ));
         buttonMap.put("00" , (Button) findViewById(R.id.Button00 ));
-        buttonMap.put("re" , (Button) findViewById(R.id.ButtonRe ));
-        buttonMap.put("eq" , (Button) findViewById(R.id.ButtonEq ));
+
+        buttonMap.put("cln", (Button) findViewById(R.id.ButtonCln));
+        buttonMap.put("equ", (Button) findViewById(R.id.ButtonEqu));
         buttonMap.put("del", (Button) findViewById(R.id.ButtonDel));
+
         buttonMap.put("dpt", (Button) findViewById(R.id.ButtonDpt));
         buttonMap.put("add", (Button) findViewById(R.id.ButtonAdd));
         buttonMap.put("sub", (Button) findViewById(R.id.ButtonSub));
         buttonMap.put("mul", (Button) findViewById(R.id.ButtonMul));
         buttonMap.put("div", (Button) findViewById(R.id.ButtonDiv));
-        Log.d(TAG, "onCreate: 2");
 
         for(int i = 0; i < 10; i++){
             int finalI = i;
             Objects.requireNonNull(buttonMap.get(String.valueOf(i).substring(0, 1))).
-                    setOnClickListener(view -> input(String.valueOf(finalI).charAt(0)));
+                    setOnClickListener(view -> input(String.valueOf(finalI)));
         }
-        Objects.requireNonNull(buttonMap.get("dpt")).setOnClickListener(view -> input('.'));
-        Objects.requireNonNull(buttonMap.get("add")).setOnClickListener(view -> input('+'));
-        Objects.requireNonNull(buttonMap.get("sub")).setOnClickListener(view -> input('-'));
-        Objects.requireNonNull(buttonMap.get("mul")).setOnClickListener(view -> input('*'));
-        Objects.requireNonNull(buttonMap.get("div")).setOnClickListener(view -> input('/'));
+        Objects.requireNonNull(buttonMap.get("dpt")).setOnClickListener(view -> input("."));
+        Objects.requireNonNull(buttonMap.get("add")).setOnClickListener(view -> input("+"));
+        Objects.requireNonNull(buttonMap.get("sub")).setOnClickListener(view -> input("-"));
+        Objects.requireNonNull(buttonMap.get("mul")).setOnClickListener(view -> input("*"));
+        Objects.requireNonNull(buttonMap.get("div")).setOnClickListener(view -> input("/"));
 
-        Log.d(TAG, "onCreate: 3");
+        Objects.requireNonNull(buttonMap.get("del")).setOnClickListener(view -> delete());
+        Objects.requireNonNull(buttonMap.get("cln")).setOnClickListener(view -> clean());
 
-        char[] inputChars = new char[]{'+', '-', '*', '/', '.'};
-        for(int i = 0; i < 14; i++){
-            int finalI = i;
-            View.OnClickListener l = view -> input(inputChars[finalI]);
-        }
-        Log.d(TAG, "onCreate: Finish");
+        Objects.requireNonNull(buttonMap.get("00")).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) { input("0"); input("0"); }
+                }
+        );
     }
-    public void input(char ch){
+    public void input(String ch){
         inputEqu += ch;
         inputTv.setText(inputEqu);
     }
@@ -84,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         inputEqu = "";
         inputTv.setText(inputEqu);
     }
-    public void delete(char ch){
+    public void delete(){
         inputEqu = inputEqu.substring(0, inputEqu.length()-1);
         inputTv.setText(inputEqu);
     }
