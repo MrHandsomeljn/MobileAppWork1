@@ -19,7 +19,8 @@
             android:id="@+id/InputEqu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp" />
+                                android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -54,8 +55,8 @@
                     android:maxWidth="90dip"
                     android:minHeight="60dip"
                     android:text="清空"
-
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/ButtonDel"
@@ -67,7 +68,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="删除"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/ButtonRes"
@@ -79,7 +81,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="重置"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/ButtonDiv"
@@ -91,7 +94,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="/"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
             </TableRow>
 
             <TableRow
@@ -111,7 +115,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="7"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/Button8"
@@ -123,7 +128,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="8"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/Button9"
@@ -135,7 +141,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="9"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/ButtonMul"
@@ -147,7 +154,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="×"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
             </TableRow>
 
             <TableRow
@@ -167,7 +175,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="4"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/Button5"
@@ -179,7 +188,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="5"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/Button6"
@@ -191,7 +201,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="6"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/ButtonSub"
@@ -203,7 +214,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="-"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
             </TableRow>
 
             <TableRow
@@ -223,7 +235,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="1"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/Button2"
@@ -235,7 +248,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="2"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/Button3"
@@ -247,7 +261,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="3"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/ButtonAdd"
@@ -259,7 +274,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="+"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
             </TableRow>
 
             <TableRow
@@ -279,7 +295,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="0"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/Button00"
@@ -291,7 +308,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="00"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/ButtonDpt"
@@ -303,7 +321,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="."
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
 
                 <Button
                     android:id="@+id/ButtonEqu"
@@ -315,7 +334,8 @@
                     android:minHeight="60dip"
                     android:maxWidth="90dip"
                     android:text="="
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText"/>
             </TableRow>
 
             <TableRow
@@ -330,8 +350,7 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

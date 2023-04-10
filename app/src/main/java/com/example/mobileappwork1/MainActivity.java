@@ -1,13 +1,13 @@
 package com.example.mobileappwork1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.exchangecalculatorutils.ExchangeCalculator;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     double currInput = 0;
     String inputEqu = "";
     TextView inputTv;
-    ArrayList<View.OnClickListener> listeners = new ArrayList<>();
     Map<String, Button> buttonMap = new HashMap<>();
+    ExchangeCalculator eCalc = new ExchangeCalculator();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,8 +61,11 @@ public class MainActivity extends AppCompatActivity {
 
         Objects.requireNonNull(buttonMap.get("del")).setOnClickListener(view -> delete());
         Objects.requireNonNull(buttonMap.get("cln")).setOnClickListener(view -> clean());
+        Objects.requireNonNull(buttonMap.get("res")).setOnClickListener(view -> reset());
+        Objects.requireNonNull(buttonMap.get("equ")).setOnClickListener(view -> equal());
 
         Objects.requireNonNull(buttonMap.get("00")).setOnClickListener(view -> { input("0"); input("0"); });
+
     }
     public void input(String ch){
         inputEqu += ch;
@@ -73,10 +76,17 @@ public class MainActivity extends AppCompatActivity {
         inputTv.setText(inputEqu);
     }
     public void delete(){
-        inputEqu = inputEqu.substring(0, inputEqu.length()-1);
-        inputTv.setText(inputEqu);
+        if(inputEqu.length() > 0){
+            inputEqu = inputEqu.substring(0, inputEqu.length()-1);
+            inputTv.setText(inputEqu);
+        }
     }
     public void equal(){
-
+        currInput = eCalc.Calc(inputEqu);
+        inputEqu = String.valueOf(currInput);
+        inputTv.setText(inputEqu);
+    }
+    public void reset(){
+        clean();
     }
 }

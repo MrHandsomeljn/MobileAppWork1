@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MobileAppWork1"
 include ':app'
+include ':app:ExchangeCalculatorUtils'
