@@ -19,8 +19,9 @@
             android:id="@+id/InputEqu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-                                android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+            android:paddingLeft="20dp"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -56,7 +57,8 @@
                     android:minHeight="60dip"
                     android:text="清空"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/ButtonDel"
@@ -69,7 +71,8 @@
                     android:maxWidth="90dip"
                     android:text="删除"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle"  />
 
                 <Button
                     android:id="@+id/ButtonRes"
@@ -82,7 +85,8 @@
                     android:maxWidth="90dip"
                     android:text="重置"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/ButtonDiv"
@@ -95,7 +99,8 @@
                     android:maxWidth="90dip"
                     android:text="/"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
             </TableRow>
 
             <TableRow
@@ -116,7 +121,8 @@
                     android:maxWidth="90dip"
                     android:text="7"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/Button8"
@@ -129,7 +135,8 @@
                     android:maxWidth="90dip"
                     android:text="8"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/Button9"
@@ -142,7 +149,8 @@
                     android:maxWidth="90dip"
                     android:text="9"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/ButtonMul"
@@ -155,7 +163,8 @@
                     android:maxWidth="90dip"
                     android:text="×"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
             </TableRow>
 
             <TableRow
@@ -176,7 +185,8 @@
                     android:maxWidth="90dip"
                     android:text="4"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/Button5"
@@ -189,7 +199,8 @@
                     android:maxWidth="90dip"
                     android:text="5"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/Button6"
@@ -202,7 +213,8 @@
                     android:maxWidth="90dip"
                     android:text="6"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/ButtonSub"
@@ -215,7 +227,8 @@
                     android:maxWidth="90dip"
                     android:text="-"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
             </TableRow>
 
             <TableRow
@@ -236,7 +249,8 @@
                     android:maxWidth="90dip"
                     android:text="1"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/Button2"
@@ -249,7 +263,8 @@
                     android:maxWidth="90dip"
                     android:text="2"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/Button3"
@@ -262,7 +277,8 @@
                     android:maxWidth="90dip"
                     android:text="3"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/ButtonAdd"
@@ -275,7 +291,8 @@
                     android:maxWidth="90dip"
                     android:text="+"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
             </TableRow>
 
             <TableRow
@@ -296,7 +313,8 @@
                     android:maxWidth="90dip"
                     android:text="0"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/Button00"
@@ -309,7 +327,8 @@
                     android:maxWidth="90dip"
                     android:text="00"
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/ButtonDpt"
@@ -322,7 +341,8 @@
                     android:maxWidth="90dip"
                     android:text="."
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/ButtonEqu"
@@ -335,7 +355,8 @@
                     android:maxWidth="90dip"
                     android:text="="
                     android:textSize="20sp"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText"
+                    style="?android:attr/buttonBarButtonStyle" />
             </TableRow>
 
             <TableRow

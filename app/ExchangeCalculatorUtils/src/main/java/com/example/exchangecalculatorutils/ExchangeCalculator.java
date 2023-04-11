@@ -3,19 +3,19 @@ package com.example.exchangecalculatorutils;
 import java.util.ArrayList;
 
 public final class ExchangeCalculator {
-    final static int Init = 0;
-    final static int Right = -1;
-    final static int Error = -2;
-    final static int Div0 = -3;
-    final static int End = -4;
-    final static int Empty = -5;
+    final public static int Init = 0;
+    final public static int Right = -1;
+    final public static int Error = -2;
+    final public static int Div0 = -3;
+    final public static int End = -4;
+    final public static int Empty = -5;
     String inputEqu = "";
     double currInput = 0;
     double rTemp = 0;
     int currState = Init;
     ArrayList<Double> numbers = new ArrayList<>();
     ArrayList<Character> symbols = new ArrayList<>();
-
+    ArrayList<Boolean> buttonAble = new ArrayList<>();
     public double Calc(String eval){
         inputEqu = eval;
         currState = getE();
@@ -34,9 +34,16 @@ public final class ExchangeCalculator {
      * isEquation, 返回可读取的等式的长度或错误类型
      */
     private int getE(){
+        boolean flag = true;
+        int curr = 0;
+        if(inputEqu.startsWith("-")){
+            flag = false;
+            curr++;
+        }
         //double start point
         if(inputEqu.length() == 0) return Empty;
-        int curr = getR(0);
+        curr = getR(curr);
+        rTemp *= flag?1:-1;
         if(curr == End && inputEqu.length() != 0) {
             currInput = rTemp;
             return Right;
@@ -59,10 +66,10 @@ public final class ExchangeCalculator {
         //calc mul and div
         for(int i = 0; i < symbols.size(); i++){
             char symbol = symbols.get(i);
-            if(symbol == '*' || symbol == '/'){
+            if(symbol == '×' || symbol == '/'){
                 double a = numbers.get(i);
                 double b = numbers.get(i+1);
-                if(symbol == '*') numbers.set(i,a*b);
+                if(symbol == '×') numbers.set(i,a*b);
                 else {
                     if(b == 0) return Div0;
                     numbers.set(i,a/b);
@@ -97,6 +104,6 @@ public final class ExchangeCalculator {
         }
     }
     public static boolean isSymbol(char ch){
-        return ch != '+' && ch != '-' && ch != '*' && ch != '/';
+        return ch != '+' && ch != '-' && ch != '×' && ch != '/';
     }
 }
